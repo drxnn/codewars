@@ -152,8 +152,28 @@ function sortByLength (array) {
     }
 
 
+    ///
+    //
+    // Exercise 7
+    ////
 
 
+//     Note: anagrams are case insensitive
+
+// Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+
+
+
+// {SOLUTION }
+
+
+var isAnagram = function(test, original) {
+  if(test.toLowerCase().split('').sort().join('') === original.toLowerCase().split('').sort().join('')){
+    return true
+  } else {
+    return false
+  }
+  }
 
 
 
