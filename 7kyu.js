@@ -177,3 +177,38 @@ var isAnagram = function(test, original) {
 
 
 
+
+
+///////
+
+
+  // EXERCISE 8
+  ////
+  //////////
+
+  // Write function alternateCase which switch every letter in string from upper to lower and from lower to upper. E.g: Hello World -> hELLO wORLD
+
+// {SOLUTION}
+///
+
+function alternateCase(s) {
+  let result = "";
+  for(let i = 0; i < s.length; i++){
+    if(s.charAt(i) === s.charAt(i).toUpperCase()){
+      result += s.charAt(i).toLowerCase()
+    } else{
+      result += s.charAt(i).toUpperCase()
+    }
+    } return result
+}
+
+//
+
+
+/////////
+///////////
+
+
+
+
+
