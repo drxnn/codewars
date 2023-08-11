@@ -386,3 +386,16 @@ function isTriangle(a,b,c){
   return (perimeter - longestSide  >longestSide) ? true : false
 }
 
+//
+////
+// Exercise
+// Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+//
+//{Solution}
+//
+function removeUrlAnchor(url){
+  let newUrl = url.split("#")[0]
+   return newUrl
+ }
+ //
+ 
