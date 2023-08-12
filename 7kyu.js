@@ -427,7 +427,7 @@ function arithmetic(a, b, operator){
       }
  
 
-
+    }
       //
       ////
       // Exercise:
@@ -452,3 +452,16 @@ function sumTwoSmallestNumbers(numbers){
   numbers = numbers.sort(function(a, b){return a - b; });
   return numbers[0] + numbers[1];
 };
+
+
+//
+// Exercise 
+// Given a string of words, return the length of the shortest word(s).
+// String will never be empty and you do not need to account for different data types.
+
+//{Solution:}
+function findShort(string) {
+  let str = string.split(" ").sort((a,b)=> a.length - b.length);
+    return str[0].length;
+  }
+  //
