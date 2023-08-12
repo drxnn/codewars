@@ -72,3 +72,15 @@ function squareSum(numbers) {
       return acc;
     }, 0);
 }
+
+//
+//
+// Exercise:
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+//{SOLUTION}
+//
+function invert(array) {
+  return array.map((x) => {
+    return Math.sign(x) === 1 ? -Math.abs(x) : Math.abs(x);
+  });
+}
