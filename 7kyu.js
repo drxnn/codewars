@@ -480,3 +480,16 @@ for(let el of a){
 } return true
 }
 
+
+// Exercise : 
+//
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+//
+//{SOLUTION}
+function disemvowel(str) {
+  let vowels = "AEIOUaeiou"
+const filteredStr = str.split("").filter(x => vowels.indexOf(x) === -1).join("");
+  return filteredStr
+}
