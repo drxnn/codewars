@@ -509,3 +509,21 @@ return`Position of alphabet: ${alphabet.indexOf(letter) +1}`
 }
 
 //end
+
+
+
+//Exercise :
+// Given an integer as input, can you round it to the next (meaning, "greater than or equal") multiple of 5?
+// input:    output:
+// 0    ->   0
+// 3    ->   5
+// 12   ->   15
+// -2   ->   0
+// -5   ->   -5
+// etc.
+// {SOLUTION}
+//
+function roundToNext5(n){
+  while(n % 5 !== 0) n++;
+  return n;
+}
