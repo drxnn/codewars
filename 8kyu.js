@@ -84,3 +84,25 @@ function invert(array) {
     return Math.sign(x) === 1 ? -Math.abs(x) : Math.abs(x);
   });
 }
+
+//
+//Exercise:
+// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+//{SOLUTION}
+function countSheeps(arrayOfSheep) {
+  let count = 0;
+  arrayOfSheep.forEach((x) => {
+    if (x === true) {
+      count++;
+    }
+  });
+  return count;
+}
+
+// or this solution:
+function countSheeps(arrayOfSheeps) {
+  return arrayOfSheeps.filter(Boolean).length;
+}
+
+// END OF EXERCISE
+//
