@@ -551,3 +551,28 @@ function checkExam(array1, array2) {
    }
  } return Math.max(score, 0);
 }
+
+//
+//
+//Exercise:
+// In this Kata, you will be given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:
+
+// make as few changes as possible.
+// if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+//{SOLUTION}
+//
+function solve(s){
+  let counter = 0;
+let value = s.split("").reduce((acc, curr) => {
+  if(curr === curr.toUpperCase()){
+    acc++
+  } return acc
+},counter);
+  if(value > s.length/2){
+    return s.toUpperCase()
+  } else{
+    return s.toLowerCase();
+  }
+}
+
+//
