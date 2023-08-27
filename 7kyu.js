@@ -596,3 +596,4 @@ function rowWeights(array){
  }, 0)
 return [teamOne, teamTwo]
 }
+//
