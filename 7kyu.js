@@ -639,3 +639,42 @@ function sumOfMinimums(arr) {
   return arr.map((x) => Math.min(...x)).reduce((acc, curr) => acc += curr)
 }
 //
+//
+// Exercise:
+// As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the numerical element that lies between the other two elements.
+
+// The input to the function will be an array of three distinct numbers
+// For example:
+// gimme([2, 3, 1]) => 0
+//
+// {SOLUTION}
+function gimme (triplet) {
+  let min = Math.min(...triplet)
+    let max = Math.max(...triplet);
+    return triplet.indexOf(triplet.filter((x) => x !== min && x !== max)[0]);
+  }
+  //
+  //
+  
+
+  //Exercise:
+//   Complete the function nato that takes a word in parameter and returns a string that spells the word using the NATO phonetic alphabet.
+
+// There should be a space between each word in the returned string, and the first letter of each word should be capitalized.
+
+//Kata has a LETTERS object built in
+
+// Examples
+// "hi"      -->  "Hotel India"
+// "Banana"  -->  "Bravo Alpha November Alpha November Alpha"
+//
+//{SOLUTION}
+
+function nato(word) {
+  let result = "";
+	let arr = word.split("");
+  arr.forEach((el) => {
+    result += `${LETTERS[el.toUpperCase()]} `;
+  })
+ return result.trim()
+}
