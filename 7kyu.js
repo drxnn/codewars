@@ -64,14 +64,11 @@ let factorial = (n) => {
 
 
 function sumDigits(number) {
-  let absoluteNumber = Math.abs(number);
-  let splitString = absoluteNumber.toString().split("")
-  let arrInt = splitString.map(x => parseInt(x))
-  let result = arrInt.reduce((acc, curr) => {
-    return acc + curr;
-  }, 0);
-return result
-  }
+  number = Math.abs(number);
+  let str = number.toString().split("");
+  return str.map((x) => parseInt(x)).reduce((acc, curr) => acc+= curr)
+}
+
 
 
   // 
