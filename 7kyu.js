@@ -698,3 +698,21 @@ const sequenceSum = (begin, end, step) => {
   }
   return sum
 };
+//
+
+
+//Exercise:
+// Task
+// Given a string str, reverse it and omit all non-alphabetic characters.
+
+// Example
+// For str = "krishan", the output should be "nahsirk".
+
+// For str = "ultr53o?n", the output should be "nortlu".
+//
+//{SOLUTION}:
+function reverseLetter(str) {
+  let alphabeticStr = [...str].filter(x => x.toLowerCase() !== x.toUpperCase())
+  return alphabeticStr.reverse().join("")
+  
+}
