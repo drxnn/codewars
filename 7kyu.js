@@ -716,3 +716,23 @@ function reverseLetter(str) {
   return alphabeticStr.reverse().join("")
   
 }
+
+
+//
+//Exercise:
+//  The examples below show you how to write function accum:
+
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+//
+//{SOLUTION}
+//
+function accum(s) {
+  let arr = s.split("").map((el,i) => {
+     el = el.repeat(i+1);
+    return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase()
+  })
+  return arr.join("-") 
+}
