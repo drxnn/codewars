@@ -139,3 +139,20 @@ function check(a, x) {
   return a.indexOf(x) > -1;
 }
 //
+
+// Exercise:
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+//
+//{Solution}
+function removeEveryOther(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+// or in 1 line
+let removeEveryOther = (a) => a.filter((x, i) => i % 2 === 0);
