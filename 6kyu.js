@@ -106,8 +106,30 @@ function isPangram(string) {
 
 //
 //Better solution found online:
+// using every() method to check if every element is in the string
 function isPangram(string) {
   return "abcdefghijklmnopqrstuvwxyz"
     .split("")
     .every((x) => string.toLowerCase().includes(x));
 }
+
+//
+//
+
+// Given two arrays a and b write a function comp(a, b) (orcompSame(a, b)) that checks whether the two arrays have the "same" elements, with the same multiplicities (the multiplicity of a member is the number of times it appears). "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.
+
+// Examples
+// Valid arrays
+// a = [121, 144, 19, 161, 19, 144, 19, 11]
+// b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+
+//{SOLUTION}
+function comp(a1, a2) {
+  if (!Array.isArray(a1) || !Array.isArray(a2) || a1.length !== a2.length) {
+    return false;
+  }
+  let a1Squared = a1.map((x) => x * x).sort((a, b) => a - b);
+  let a2Sorted = a2.sort((a, b) => a - b);
+  return a1Squared.every((e, i) => e === a2Sorted[i]);
+}
+//
