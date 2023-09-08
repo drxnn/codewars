@@ -779,3 +779,23 @@ function trim(str, size) {
 //{SOLUTION}
 let circleArea = r =>  typeof r === "string" || r<=0 ? false : Math.round((r**2 * Math.PI) * 100) / 100 ;
   
+
+//
+//Create a function that takes an array as an argument and filters out the odd numbers and returns the even numbers
+//
+//{SOLUTION}
+let callback = (i) => i % 2===0;
+
+let getEvenNumbers = (a, callback) => {
+  let result = [];
+  for(let i = 0; i<a.length; i++){
+    if(callback(a[i])){
+       result.push(a[i])
+    }
+   
+  } 
+  return result
+}
+//
+// or
+let getEvenNums = a => a.filter(x => x%2 === 0)
