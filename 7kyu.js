@@ -764,3 +764,18 @@ function trim(str, size) {
     return `${strArr.join("")}...`
   }
 }
+
+
+///
+// Create function which will return the area of a circle with the given radius.
+
+// Round the returned number to two decimal places. If the radius is not positive or not a number, return false.
+
+// Example:
+
+// circleArea(-1485.86);    //returns false
+// circleArea(0);           //returns false
+//
+//{SOLUTION}
+let circleArea = r =>  typeof r === "string" || r<=0 ? false : Math.round((r**2 * Math.PI) * 100) / 100 ;
+  
