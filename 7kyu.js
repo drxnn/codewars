@@ -818,4 +818,18 @@ let getEvenNums = a => a.filter(x => x%2 === 0)
 // {SOLUTION}
 // Re-factored into 1 line
  let  predictAge = (...ages) => Math.floor(Math.sqrt(ages.map((x) => x*x).reduce((acc, c) => acc += c)) / 2)
-  
+ //
+
+
+
+ 
+  //
+//   Given a list of integers, determine whether the sum of its elements is odd or even.
+// Give your answer as a string matching "odd" or "even".
+// If the input array is empty consider it as: [0] (array with a zero).
+//
+//{SOLUTION}
+function oddOrEven(a) {
+  let sum = a.reduce((acc,c) => acc +=c,0);
+  return sum % 2 === 0 || a.length === 0 ? "even" : "odd"
+}
