@@ -833,3 +833,30 @@ function oddOrEven(a) {
   let sum = a.reduce((acc,c) => acc +=c,0);
   return sum % 2 === 0 || a.length === 0 ? "even" : "odd"
 }
+
+// Problem:
+
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+// The input will be a lowercase string with no spaces.
+
+// {SOLUTION}
+function capitalize(s) {
+  return [
+    s
+      .split("")
+      .map((el, i) => {
+        return i % 2 === 0 ? el.toUpperCase() : el.toLowerCase();
+      })
+      .join(""),
+    s
+      .split("")
+      .map((el, i) => {
+        return i % 2 !== 0 ? el.toUpperCase() : el.toLowerCase();
+      })
+      .join(""),
+  ];
+}
+  
