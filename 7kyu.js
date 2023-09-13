@@ -873,3 +873,21 @@ function capitalize(s) {
 
 //{SOLUTION}(re-factored)
 let flattenAndSort = a =>  a.flat().sort((a,b)=> a-b)
+//
+//
+
+
+
+//Exercise:
+// Given a sequence of numbers, find the largest pair sum in the sequence.
+
+// For example
+
+// [10, 14, 2, 23, 19] -->  42 (= 23 + 19)
+// [99, 2, 2, 23, 19]  --> 122 (= 99 + 23)
+
+//{SOLUTION}
+let  largestPairSum = n => n.sort((a,b) => b-a).reduce((acc, curr, i) => {
+  if(i === 0 || i === 1){acc+= curr}
+  return acc
+})
