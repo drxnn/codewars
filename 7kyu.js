@@ -907,3 +907,9 @@ let arrOfBumps = x.filter((el)=> {
 return arrOfBumps.length <= 15 ? "Woohoo!" : "Car Dead"
 
 }
+
+//Better solution:
+const bump=x=>x.split('n').length>16?"Car Dead":"Woohoo!"
+
+//
+//
