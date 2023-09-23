@@ -891,3 +891,19 @@ let  largestPairSum = n => n.sort((a,b) => b-a).reduce((acc, curr, i) => {
   if(i === 0 || i === 1){acc+= curr}
   return acc
 })
+
+
+//
+// Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
+
+// Unfortunately for you, your drive is very bumpy! Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return Car Dead
+//
+//{SOLUTION}
+function bump(x){
+  x = x.split("")
+let arrOfBumps = x.filter((el)=> {
+ return el === "n"
+})
+return arrOfBumps.length <= 15 ? "Woohoo!" : "Car Dead"
+
+}
