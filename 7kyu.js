@@ -978,3 +978,22 @@ function nbDig(n, d) {
 // YoMama -> [1,2,4,6]
 
 //{SOLUTION}:
+function vowelIndices(word){
+  let vowels = "aeiouy";
+  let listOfVowels = [];
+  word.split("").forEach((x, i) => {
+    x = x.toLowerCase();
+    if (vowels.indexOf(x) > -1){
+      listOfVowels.push(i)
+    }
+    else
+    {
+      return []
+    }
+    
+  })
+  console.log(word)
+  return listOfVowels.map(x => x+1)
+}
+
+//
