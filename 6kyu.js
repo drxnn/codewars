@@ -331,3 +331,18 @@ Given an array (arr) as an argument complete the function countSmileys that shou
 // countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
 
 // {SOLUTION}
+
+//return the total number of smiling faces in the array
+function countSmileys(arr) {
+  const validSmileyPattern = /[:;][-~]?[)D]/;
+
+  let count = arr.reduce((acc, c) => {
+    if(validSmileyPattern.test(c)){
+      acc++
+    };
+    return acc
+  },0)
+  return count
+  }
+
+  
