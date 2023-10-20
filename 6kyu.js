@@ -361,9 +361,7 @@ var uniqueInOrder = function (iterable) {
   if (typeof iterable === "string") {
     iterable = iterable.split("");
   }
-  return iterable
-    .sort((a, b) => a - b)
-    .filter((x, i) => {
-      return x !== iterable[i + 1];
-    });
+  return iterable.filter((x, i) => {
+    return x !== iterable[i + 1];
+  });
 };
