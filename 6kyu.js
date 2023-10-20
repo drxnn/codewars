@@ -311,9 +311,8 @@ let multiplicationTable = (size) => {
   });
 };
 
-
 //
-Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+// Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
 
 // Rules for a smiling face:
 
@@ -337,12 +336,34 @@ function countSmileys(arr) {
   const validSmileyPattern = /[:;][-~]?[)D]/;
 
   let count = arr.reduce((acc, c) => {
-    if(validSmileyPattern.test(c)){
-      acc++
-    };
-    return acc
-  },0)
-  return count
-  }
+    if (validSmileyPattern.test(c)) {
+      acc++;
+    }
+    return acc;
+  }, 0);
+  return count;
+}
 
-  
+//
+//Exercise:
+
+//   Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+// For example:
+
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+//{Solution}
+
+var uniqueInOrder = function (iterable) {
+  if (typeof iterable === "string") {
+    iterable = iterable.split("");
+  }
+  return iterable
+    .sort((a, b) => a - b)
+    .filter((x, i) => {
+      return x !== iterable[i + 1];
+    });
+};
