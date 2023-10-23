@@ -28,3 +28,24 @@ function delay(ms) {
 }
 
 delay(3000).then(() => alert("runs after 3 seconds"));
+
+//
+//
+
+function wait(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+wait(2000).then(() => {
+  console.log("2 seconds passed");
+});
+
+// async version of function above:
+
+async function main() {
+  await wait(2000);
+
+  console.log("2 seconds have passed");
+}
