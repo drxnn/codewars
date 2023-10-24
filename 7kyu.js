@@ -1053,3 +1053,19 @@ function SeriesSum(n)
 //Recursive solution:
 
 
+//
+// given an array of integers as strings and numbers, return the sum of array values as if all were nums
+
+// return your number as a num
+
+
+let arr = ["3", 6, "10", 15, 2]
+
+//solution
+
+let sumNumStr = arr => {
+  return arr.reduce((acc, c) => {
+    acc += +c;
+    return acc
+  },0)
+}
