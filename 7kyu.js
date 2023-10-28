@@ -1053,6 +1053,9 @@ function SeriesSum(n)
 //Recursive solution:
 
 
+
+
+
 //
 // given an array of integers as strings and numbers, return the sum of array values as if all were nums
 
@@ -1068,4 +1071,23 @@ let sumNumStr = arr => {
     acc += +c;
     return acc
   },0)
+}
+
+
+
+
+//
+// Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+// adjacentElementsProduct([1, 2, 3]); ==> return 6 ( 2* 3 = 6)
+//
+//{SOLUTION}
+function adjacentElementsProduct(array) {
+  let holder = []
+array.map((el, i) => {
+  if(i < array.length-1){
+      let product = el * array[i+1];
+  holder.push(product)
+  }
+});
+  return Math.max(...holder)
 }
