@@ -49,3 +49,51 @@ async function main() {
 
   console.log("2 seconds have passed");
 }
+
+//
+//
+// destructuring practice
+
+let numbers = [1, 2, 3, 4, 5, 6];
+
+// the spread operator basically assigns the remaining elements to the rest variable
+const [first, second, ...rest] = numbers;
+console.log(first, second, rest);
+
+const personOne = {
+  name: "drin",
+  age: 23,
+  address: {
+    city: "New York City",
+    state: "New York",
+  },
+};
+
+const personTwo = {
+  name: "sarah",
+  age: 21,
+  address: {
+    city: "New York City",
+    state: "New York",
+  },
+};
+
+const {
+  name: firstName, // this is assigning the value of name to the variable firstName
+  address: { city },
+} = personOne;
+
+console.log(firstName, city);
+
+function printUser(object) {
+  console.log(`Name is ${object.name}. Age is ${object.age}`);
+}
+// this can be re-written as this:
+
+// since we know that we are going to pass an object as an argument we can simply destructure it like this:
+
+function printUser({ name, age }) {
+  console.log(`Name is ${name}. Age is ${age}`);
+}
+
+printUser(personOne);
