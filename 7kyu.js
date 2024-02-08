@@ -1205,3 +1205,21 @@ throw new RangeError("Cannot factorize")
 
 
 }
+
+
+
+
+
+
+
+
+// Find the number with the most digits.
+
+// If two numbers in the argument array have the same number of digits, return the first one in the array.
+//
+//{SOLUTION}
+function findLongest(array){
+  let digitNums = array.map((x) => x = x.toString().length)
+ const index = digitNums.indexOf(Math.max(...digitNums))
+ return array[index]
+ }
