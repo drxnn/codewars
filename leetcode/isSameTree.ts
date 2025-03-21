@@ -28,8 +28,6 @@ function walk(currLeft: TreeNode | null, currRight: TreeNode | null): boolean {
       walk(currLeft!.right, currRight!.right)
     );
   }
-
-  return true;
 }
 
 function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
