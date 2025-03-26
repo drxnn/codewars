@@ -20,27 +20,3 @@ function construct2DArray(
   }
   return output;
 }
-
-function moveZeroes(nums: number[]): void {
-  let left = 0,
-    fastLeft = left + 1,
-    i = nums.length - 1;
-
-  while (left <= i && !(fastLeft > i)) {
-    let temp = nums[left];
-
-    if (nums[left] === 0) {
-      nums[left] = nums[fastLeft];
-      nums[fastLeft] = temp;
-      if (nums[left] === 0 && nums[fastLeft] === 0) {
-        fastLeft++;
-      } else {
-        left++;
-        fastLeft++;
-      }
-    } else if (nums[left] !== 0) {
-      left++;
-      fastLeft++;
-    }
-  }
-}
